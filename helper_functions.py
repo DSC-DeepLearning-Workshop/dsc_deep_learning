@@ -38,7 +38,8 @@ def plot_batch(img):
 def plot_images_predictions(
         model,
         classes,
-        dataset):
+        dataset,
+        device):
     image_list = []
     labels = []
     preds = []
@@ -48,6 +49,7 @@ def plot_images_predictions(
         image_list.append(image)
         labels.append(y)
 
+        x = x.to(device)
         pred = model(x.unsqueeze(0))
         preds.append(pred.argmax(1))
 
