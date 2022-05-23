@@ -9,7 +9,7 @@ def plot_images(root,
                 classes):
     image_list = []
 
-    for folder in os.listdir(root):
+    for folder in sorted(os.listdir(root)):
         file = os.listdir(f'{root}/{folder}')[0]
         image = read_image(f'{root}/{folder}/{file}')
         image_list.append(image)
