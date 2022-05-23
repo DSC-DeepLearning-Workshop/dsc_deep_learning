@@ -56,7 +56,7 @@ def plot_images_predictions(
     fig, axs = plt.subplots(ncols=len(classes),
                             nrows=(len(image_list) // len(classes)) + 1,
                             squeeze=False,
-                            figsize=(20, 50))
+                            figsize=(50, 50))
 
     for i, img in enumerate(image_list):
         img = F.to_pil_image(img)
